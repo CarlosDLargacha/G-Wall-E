@@ -1,0 +1,59 @@
+[gd_scene load_steps=6 format=3 uid="uid://bsw06o72wxmyj"]
+
+[ext_resource type="Script" path="res://VSplitContainer.cs" id="1_himqo"]
+[ext_resource type="Script" path="res://WCodeEdit.cs" id="2_b5jxd"]
+[ext_resource type="Script" path="res://WTextEdit.cs" id="3_2hbkg"]
+[ext_resource type="Script" path="res://WGraphEdit.cs" id="4_pdibv"]
+[ext_resource type="Script" path="res://WButton.cs" id="5_amito"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1150.0
+offset_bottom = 645.0
+color = Color(0.294118, 0.294118, 0.294118, 1)
+
+[node name="HSplitContainer" type="HSplitContainer" parent="."]
+layout_mode = 0
+offset_top = 42.0
+offset_right = 1151.0
+offset_bottom = 646.0
+split_offset = 300
+
+[node name="VSplitContainer" type="VSplitContainer" parent="HSplitContainer"]
+layout_mode = 2
+split_offset = 400
+script = ExtResource("1_himqo")
+
+[node name="CodeEdit" type="CodeEdit" parent="HSplitContainer/VSplitContainer"]
+layout_mode = 2
+placeholder_text = "Input here"
+gutters_draw_line_numbers = true
+script = ExtResource("2_b5jxd")
+
+[node name="TextEdit" type="TextEdit" parent="HSplitContainer/VSplitContainer"]
+layout_mode = 2
+editable = false
+script = ExtResource("3_2hbkg")
+
+[node name="GraphEdit" type="GraphEdit" parent="HSplitContainer"]
+layout_mode = 2
+script = ExtResource("4_pdibv")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 6.0
+offset_right = 70.0
+offset_bottom = 35.0
+text = "Run"
+script = ExtResource("5_amito")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

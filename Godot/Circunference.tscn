@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://brivcubh0ke3r"]
+
+[ext_resource type="Script" path="res://Circunference.cs" id="1_hlcj1"]
+[ext_resource type="Script" path="res://Circundference2D.cs" id="2_lhcp4"]
+
+[node name="GraphNode" type="GraphNode"]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = -1
+anchor_right = 0.26
+anchor_bottom = 0.294
+offset_left = -1.0
+offset_top = 3.0
+offset_right = -264.52
+offset_bottom = -133.512
+resizable = true
+script = ExtResource("1_hlcj1")
+
+[node name="Node2D" type="Node2D" parent="."]
+script = ExtResource("2_lhcp4")

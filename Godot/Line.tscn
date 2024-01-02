@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://ceye7y3y1vouw"]
+
+[ext_resource type="Script" path="res://WLine.cs" id="1_4hdke"]
+[ext_resource type="Script" path="res://Line2d.cs" id="3_juqaa"]
+
+[node name="GraphNode" type="GraphNode"]
+self_modulate = Color(1, 1, 1, 0)
+offset_right = 36.0
+offset_bottom = 54.0
+script = ExtResource("1_4hdke")
+
+[node name="Node2D" type="Node2D" parent="."]
+script = ExtResource("3_juqaa")

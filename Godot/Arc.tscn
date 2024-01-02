@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcw06tjpbsyw4"]
+
+[ext_resource type="Script" path="res://WArc.cs" id="1_k7cfb"]
+[ext_resource type="Script" path="res://Arc2D.cs" id="2_d8xxa"]
+
+[node name="GraphNode" type="GraphNode"]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = -1
+anchor_right = 0.26
+anchor_bottom = 0.294
+offset_left = -1.0
+offset_top = 3.0
+offset_right = -264.52
+offset_bottom = -133.512
+resizable = true
+script = ExtResource("1_k7cfb")
+
+[node name="Node2D" type="Node2D" parent="."]
+script = ExtResource("2_d8xxa")
